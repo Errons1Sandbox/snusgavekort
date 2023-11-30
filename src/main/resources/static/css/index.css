@@ -1,7 +1,239 @@
 body {
-    background: red;
+    background-image: url('../img/snus.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: 0;
 }
 
-h1 {
-    color: red;
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main-title {
+    -webkit-text-stroke: 2px white;
+    color: black;
+    font-size: 8rem;
+    
+    animation-name: main-title-color-change;
+    animation-duration: 4s; /* Duration of the entire animation cycle */
+    animation-iteration-count: infinite; /* Repeat the animation indefinitely */
+}
+
+@keyframes main-title-color-change {
+    0%   { color: red; }
+    25%  { color: blue; }
+    50%  { color: green; }
+    75%  { color: yellow; }
+    100% { color: red; }
+}
+
+/* style.css */
+.sketchy-div {
+    z-index: 9999;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* This font has a hand-written look */
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: white;
+    box-shadow: 3px 3px 0 0 black;
+    border-radius: 8px; /* Slightly rounded corners for a softer look */
+
+    /* Making the border look irregular and sketch-like */
+    border-top-color: #FF4136;
+    border-right-color: #0074D9;
+    border-bottom-color: #2ECC40;
+    border-left-color: #FF851B;
+
+    /* Adding a hover effect */
+    transition: all 0.3s ease;
+}
+
+.sketchy-button:hover {
+    background-color: #ddd;
+    box-shadow: 5px 5px 0 0 black;
+}
+
+
+.container{
+    z-index: 1;
+    position: absolute;
+    top: -60vh;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+#container-1{
+    animation-name: fallanimation;
+    animation-duration: 8s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#container-2{
+    animation-name: fallanimation;
+    animation-duration: 8s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#container-3{
+    animation-name: fallanimation;
+    animation-duration: 8s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+/* Setter avstand mellom kvert fnugg i et sett med konfetti */
+.confetti{
+    width: 100vw;
+    height: 10vh;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* 
+Stilering av kver klasse med fnugg: 
+Form, farge og timing på spinn 
+*/
+.rectangle-1{
+    background-color: rgb(211, 22, 22);
+    width: 10px;
+    height: 5px;
+    margin: 5%;
+    animation-name: confettispin;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.rectangle-2{
+    background-color: rgb(251, 255, 0);
+    width: 8px;
+    height: 4px;
+    margin: 5%;
+    animation-name: confettispin;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.rectangle-3{
+    background-color: rgb(0, 42, 255);
+    width: 7px;
+    height: 3px;
+    margin: 5%;
+    animation-name: confettispin;
+    animation-duration: 2s;
+    animation-delay: 25ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.rectangle-4{
+    background-color: rgb(64, 255, 0);
+    width: 8px;
+    height: 10px;
+    margin: 5%;
+    animation-name: confettispin;
+    animation-duration: 2s;
+    animation-delay: 15ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.rectangle-5{
+    background-color: rgb(255, 0, 242);
+    width: 7px;
+    height: 7px;
+    margin: 5%;
+    animation-name: confettispin;
+    animation-duration: 2s;
+    animation-delay: 75ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.ellipse-1{
+    background-color: rgb(0, 0, 255);
+    border-radius: 50%;
+    width: 10px;
+    height: 5px;
+    animation-name: confettispin;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.ellipse-2{
+    background-color: rgb(43, 255, 0);
+    border-radius: 50%;
+    width: 5px;
+    height: 9px;
+    animation-name: confettispin;
+    animation-duration: 2s;
+    animation-delay: 1.75s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.ellipse-3{
+    background-color: rgb(255, 0, 106);
+    border-radius: 50%;
+    width: 4px;
+    height: 7px;
+    animation-name: confettispin;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.ellipse-4{
+    background-color: rgb(255, 208, 0);
+    border-radius: 50%;
+    width: 7px;
+    height: 3px;
+    animation-name: confettispin;
+    animation-duration: 2s;
+    animation-delay: 1.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.ellipse-5{
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    animation-name: confettispin;
+    animation-duration: 2s;
+    animation-delay: 60ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+/* Animasjon som får div-container til å falles ned */
+@keyframes fallanimation{
+    0% {top: -50vh; transform: translateX(1%); opacity: 0.75;}
+    10%{top: -45vh; transform: translateX(-1%); opacity: 0.75;}
+    20%{top: -40vh; transform: translateX(1%); opacity: 0.75;}
+    30%{top: -35vh; transform: translateX(-1%); opacity: 0.75;}
+    40%{top: -30vh; transform: translateX(1%); opacity: 0.75;}
+    50%{top: -25vh; transform: translateX(-1%); opacity: 0.75;}
+    60%{top: -20vh; transform: translateX(1%); opacity: 0.75;}
+    70%{top: -15vh; transform: translateX(-1%); opacity: 0.75;}
+    80%{top: -10vh; transform: translateX(1%); opacity: 0.50;}
+    90%{top: -5vh; transform: translateX(-1%); opacity: 0.25;}
+    100%{top: 0vh; transform: translateX(-1%); opacity: 0;}
+}
+/* Animasjon får kvert fnugg til å spinne */
+@keyframes confettispin{
+    0%{transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+    25%{transform: rotateX(90deg) rotateY(100deg) rotateZ(50deg);}
+    50%{transform: rotateX(180deg) rotateY(150deg) rotateZ(200deg);}
+    75%{transform: rotateX(270deg) rotateY(270deg) rotateZ(270deg);}
+    100%{transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
 }
